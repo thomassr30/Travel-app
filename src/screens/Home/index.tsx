@@ -10,6 +10,7 @@ import Title from '../../components/Title';
 import styles from './styles';
 import jsonData from '../../data/attractions.json'
 import categories from '../../data/categories.json'
+import { useNavigation } from '@react-navigation/native';
 
 export interface IData {
   id:           number;
@@ -31,8 +32,11 @@ export interface Coordinates {
 }
 
 const Home = ():JSX.Element => {
+
+  const navigation = useNavigation()
+
   const [selectedCategory, setselectedCategory] = useState('All')
-  const [data, setdata] = useState<IData[]>([])
+  const [data, setdata] = useState<any[]>([])
 
   const ALL = 'All'
 
@@ -91,6 +95,7 @@ const Home = ():JSX.Element => {
                 <AttractionCard 
                     key={item.id}
                     style={index % 2 === 0 ? {marginRight: 12}: {}}
+                    onPress={() => navigation.navigate('AttractionDetails' as never, {item: item as never})}
                     title={item.name}
                     subtitle={item.city}
                     imageSrc={item.images?.length ? item.images[0]: null}

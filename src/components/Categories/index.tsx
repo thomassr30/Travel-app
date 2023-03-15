@@ -3,7 +3,7 @@ import { FlatList, Pressable, Text, TouchableOpacity, View } from 'react-native'
 import styles from './styles'
 
 const Categories = ({categories, selectedCategory, onCategoryPress}: any) => {
-    console.log(categories)
+    //console.log(categories)
   return (
     <FlatList 
         data={categories} 
