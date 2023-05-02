@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
         fontSize: 32,
         color: '#4681A3',
         fontWeight: 'bold'
-    }
+    },
 })
 
 export default styles;

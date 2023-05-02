@@ -44,9 +44,28 @@ const styles = StyleSheet.create({
         position: 'absolute',
         color: '#fff',
         fontWeight: 'bold',
-        fontSize: 24,
+        fontSize: 20,
         top: 12,
         left: 10,
+    },
+    headerContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginVertical: 30
+    },
+    textContainer: {
+
+    },
+    title: {
+        color: '#000'
+    },
+    city: {
+        fontSize: 30,
+        fontWeight: '500'
+    },
+    price: {
+        color: '#000'
     }
 })
 

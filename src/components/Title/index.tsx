@@ -9,4 +9,4 @@ const Title = ({text, style}: any):JSX.Element => {
   )
 }
 
-export default Title;
+export default React.memo(Title) ;
